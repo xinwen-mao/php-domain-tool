@@ -25,7 +25,7 @@
 
 ## 使用示例
 
-**CLI 模式**
+#### CLI 模式
 
 ```php
 (AliyunDomain::getInstance())->run();
@@ -39,7 +39,7 @@ $ php domain-tool.php -n baidu.com
 }%
 ```
 
-**公用方法**
+#### 公用方法
 
 ```
 $aliyunDomain = AliyunDomain::getInstance();
