@@ -2,7 +2,10 @@
 
 在查询域名时候无聊用 `PHP` 写了一个基于 **阿里云** 接口的域名查询工具，该工具就只有一个类，采用单例模式，支持 CLI 模式运行，以及作为类文件被引用。
 
+## 目前支持
 
+- CLI 模式
+- 公用方法
 
 ## 项目结构
 
@@ -14,20 +17,12 @@
 0 directories, 2 files
 ```
 
-
-
-## 目前支持
-
-* CLI 模式
-* 公用方法
-
-
-
 ## 使用示例
 
 #### CLI 模式
 
 ```php
+<?php
 (AliyunDomain::getInstance())->run();
 ```
 
@@ -42,6 +37,7 @@ $ php domain-tool.php -n baidu.com
 #### 公用方法
 
 ```
+<?php
 $aliyunDomain = AliyunDomain::getInstance();
 $result = $aliyunDomain->checkDomain('baidu.com');
 print_r($result);
