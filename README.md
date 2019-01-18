@@ -1,6 +1,6 @@
 # PHP域名查询工具
 
-在查询域名时候无聊用 `PHP` 写了一个基于 **阿里云** 接口的域名查询工具，该工具就只有一个类，采用单例模式，支持 CLI 模式运行，以及作为类文件被引用。
+在查询域名时候无聊用 `PHP` 写了一个基于 **阿里云** 接口的域名注册查询工具，该工具就只有一个类，采用单例模式，支持 CLI 模式运行，以及作为类文件被引用。
 
 ## 目前支持
 
@@ -28,9 +28,21 @@
 
 ```shell
 $ php domain-tool.php -n baidu.com
+
+# 已被注册
 {
     "code": 1,
     "msg": "baidu.com 已被注册"
+}%
+
+# 未被注册
+$ php domain-tool.php -n hello-world-test.com
+{
+    "code": 0,
+    "msg": "hello-world-test.com 可注册",
+    "data": [
+        "hello-world-test.com"
+    ]
 }%
 ```
 
