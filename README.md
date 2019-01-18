@@ -59,3 +59,13 @@ print_r($result);
 }
 ```
 
+
+
+## 获取
+
+#### 通过 git 克隆
+
+```
+git clone https://github.com/xinwen-mao/php-domain-tool
+```
+
