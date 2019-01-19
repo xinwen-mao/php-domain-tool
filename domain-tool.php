@@ -83,6 +83,8 @@ class AliyunDomain {
         if (empty($name))
             throw new Exception('缺少参数');
 
+        $name = urlencode($name);
+
         // 接口抓取阿里云域名查询的，token有效期暂不清楚，该类已封装获取token方法，另外经测试token为空也可调用该接口。
         $url = "https://checkapi.aliyun.com/check/checkdomain?domain={$name}&command=&token={$this->token}&ua=&currency=&site=&bid=&_csrf_token=&callback=";
         $result = file_get_contents($url);
